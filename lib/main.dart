@@ -49,8 +49,107 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.amber[900],
         toolbarHeight: 80,
         title: Text(widget.title),
+        actions: const [
+          IconButton(
+            onPressed: null,
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+          )
+        ],
       ),
-      body: Center(),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 20, left: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text(
+              'Limpeza',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: const <Widget>[
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Detergente',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 157, 86, 0), fontSize: 16),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Sabão em pó',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 157, 86, 0), fontSize: 16),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Desinfetante',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 157, 86, 0), fontSize: 16),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Bombril',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 157, 86, 0), fontSize: 16),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Água Sanitária',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 157, 86, 0), fontSize: 16),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.circle,
+                      size: 16,
+                      color: Colors.black26,
+                    ),
+                    title: Text(
+                      'Saco de Lixo',
+                      style: TextStyle(color: Color(0xFF9D5600), fontSize: 16),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
